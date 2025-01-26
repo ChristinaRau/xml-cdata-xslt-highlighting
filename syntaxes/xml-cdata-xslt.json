@@ -1,0 +1,32 @@
+{
+  "scopeName": "source.xml.injection",
+ "fileTypes": ["xml"],
+  "injectionSelector": "L:source -comment",
+  "patterns": [
+    {
+      "include": "#cdata-section"
+    }
+  ],
+  "repository": {
+    "cdata-section": {
+      "begin": "<!\\[CDATA\\[",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.begin.xml"
+				}
+			},
+			"end": "]]>",
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end.xml"
+				}
+			},
+			"name": "string.unquoted.cdata.xml",
+			"patterns": [
+				{
+					"include": "text.xsl"
+				}
+			]
+    }
+  }
+}

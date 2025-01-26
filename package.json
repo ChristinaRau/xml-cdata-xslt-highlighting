@@ -1,0 +1,27 @@
+{
+  "name": "xml-cdata-xslt-highlighting",
+  "displayName": "XML CDATA XSLT Highlighting",
+  "description": "Adds XSLT syntax highlighting to CDATA sections in XML files.",
+  "version": "1.0.0",
+  "publisher": "ChristinaRau",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "grammars": [
+      {
+        "scopeName": "source.xml.injection",
+        "path": "./syntaxes/xml-cdata-xslt.json",
+        "injectTo": ["text.xml", "source.xml"],
+        "embeddedLanguages": {
+          "string.unquoted.cdata.xml": "xsl"
+        },
+        "tokenTypes": {
+          "string.unquoted.cdata.xml": "other"
+        }
+      }
+    ]
+  }
+  
+}
