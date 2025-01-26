@@ -1,32 +1,22 @@
 {
-  "scopeName": "source.xml.injection",
- "fileTypes": ["xml"],
-  "injectionSelector": "L:source -comment",
-  "patterns": [
-    {
-      "include": "#cdata-section"
-    }
-  ],
-  "repository": {
-    "cdata-section": {
-      "begin": "<!\\[CDATA\\[",
-			"beginCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.begin.xml"
-				}
-			},
-			"end": "]]>",
-			"endCaptures": {
-				"0": {
-					"name": "punctuation.definition.string.end.xml"
-				}
-			},
-			"name": "string.unquoted.cdata.xml",
+	"scopeName": "source.xml.injection",
+	"fileTypes": ["xml"],
+	"injectionSelector": "text.xml",
+	"patterns": [
+		{
+			"include": "#cdata-section"
+		}
+	],
+	"repository": {
+		"cdata-section": {
+			"begin": "(?<=CDATA\\[)",
+			"end": "(?=]])",
+			"contentName": "text.xml.xsl",
 			"patterns": [
 				{
-					"include": "text.xsl"
+					"include": "text.xml.xsl"
 				}
 			]
-    }
-  }
+		}
+	}
 }
