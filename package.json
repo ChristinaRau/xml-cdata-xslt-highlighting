@@ -7,6 +7,7 @@
   "engines": {
     "vscode": "^1.80.0"
   },
+  "icon": "logo.png",
   "categories": ["Programming Languages"],
   "contributes": {
     "grammars": [
@@ -22,6 +23,21 @@
         }
       }
     ]
-  }
-  
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristinaRau/xml-cdata-xslt-highlighting.git"},
+  "bugs": {
+    "url": "https://github.com/ChristinaRau/xml-cdata-xslt-highlighting/issues"
+  },
+  "homepage": "https://github.com/ChristinaRau/xml-cdata-xslt-highlighting",
+  "keywords": ["xml", "xslt", "cdata", "syntax highlighting"],
+  "devDependencies": {
+    "vsce": "^2.10.0"
+  },
+  "scripts": {
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "license": "MIT"
 }
